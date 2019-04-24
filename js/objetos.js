@@ -9,7 +9,11 @@ var suelos = [];
 var circulos = [];
 
 function Circle(x, y, r){
-    var circle = Bodies.circle(x, y, r);
+    var options = {
+        friction: 0,
+        restitution: 1
+    };
+    var circle = Bodies.circle(x, y, r, options);
     World.add(engine.world, circle);
     
     this.position = circle.position;
@@ -24,7 +28,8 @@ function Circle(x, y, r){
 function Ground(x, y, w, h){
     var options = {
         isStatic: true,
-        friction: 0
+        friction: 0,
+        restitution: 1
     }
     var ground = Bodies.rectangle(x, y, w, h, options);
     World.add(engine.world, ground);
