@@ -23,9 +23,10 @@ function Circle(x, y, r){
 }
 function Ground(x, y, w, h){
     var options = {
-    
+        isStatic: true,
+        friction: 0
     }
-    var ground = Bodies.rectangle(x, y, w, h);
+    var ground = Bodies.rectangle(x, y, w, h, options);
     World.add(engine.world, ground);
     
     this.position = ground.position;
