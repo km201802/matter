@@ -11,10 +11,14 @@ var circulos = [];
 function Circle(x, y, r){
     var options = {
         friction: 0,
-        restitution: 1
+        restitution: 1,
+        gravityScale: 0,
+        
     };
     var circle = Bodies.circle(x, y, r, options);
     World.add(engine.world, circle);
+    circle.velocity.x = 3;
+    circle.velocity.y = 5;
     
     this.position = circle.position;
     
