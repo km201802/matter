@@ -35,6 +35,13 @@ function draw(){
             circulos.splice(i, 1);
         }
     }
+    push();
+    textAlign(CENTER);
+    fill("black");
+    textSize(22);
+    textFont("Arial");
+    text(circulos.lenght, 40, 40);
+    pop();
     console.log(circulos.length);
     Engine.update(engine);
 }
