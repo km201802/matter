@@ -42,7 +42,7 @@ function draw(){
     textSize(22);
     textFont("Arial");
     //rect(40,40,40,40);
-    text(circulos.lenght , 40, 40);
+    text( circulos.length , 40, 40);
     pop();
     console.log(circulos.length);
     Engine.update(engine);
