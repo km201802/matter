@@ -18,9 +18,9 @@ function setup(){
 }
 function draw(){
     background(100);
-    if(mouseIsPressed()){
+    /*if(mouseIsPressed()){
         circulos.push(new Circle(mouseX,mouseY,20,false));
-    }
+    }*/
     for(var i=0; i<suelos.length; i++){
         suelos[i].draw();
     }
