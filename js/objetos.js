@@ -12,7 +12,9 @@ function Circle(x, y, r, s){
     circle.velocity.y = 5;
     
     this.position = circle.position;
-    
+    this.borrar = function(){
+        return (this.position.x > width+100)
+    }
     this.draw = function(){
         push();
         translate(this.position.x, this.position.y);
