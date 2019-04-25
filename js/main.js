@@ -31,8 +31,8 @@ function draw(){
     }
     for(var i=0; i<circulos.length; i++){
         circulos[i].draw();
-        if(circulos[i].borrar){
-            alert(circulos[i].borrar);
+        if(circulos[i].borrar()){
+            //alert(circulos[i].borrar());
             circulos.splice(i, 1);
         }
     }
