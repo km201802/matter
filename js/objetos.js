@@ -13,7 +13,7 @@ function Circle(x, y, r, s){
     
     this.position = circle.position;
     this.borrar = function(){
-        return (this.position.x > width+100)
+        return (this.position.y > width+100)
     }
     this.draw = function(){
         push();
