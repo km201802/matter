@@ -37,10 +37,12 @@ function draw(){
     }
     push();
     textAlign(CENTER);
+    rectMode(CENTER);
     fill("black");
     textSize(22);
     textFont("Arial");
-    text(circulos.lenght, 40, 40);
+    rect(40,40,40,40);
+    text(circulos.lenght , 40, 40);
     pop();
     console.log(circulos.length);
     Engine.update(engine);
