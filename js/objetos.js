@@ -1,8 +1,9 @@
-function Circle(x, y, r){
+function Circle(x, y, r, s){
     var options = {
         friction: 0,
         restitution: 1,
         gravityScale: 0,
+        isStatic: s,
         
     };
     var circle = Bodies.circle(x, y, r, options);
@@ -19,9 +20,9 @@ function Circle(x, y, r){
         pop();
     }
 }
-function Ground(x, y, w, h){
+function Box(x, y, w, h, s){
     var options = {
-        isStatic: true,
+        isStatic: s,
         friction: 0,
         restitution: 1
     }
