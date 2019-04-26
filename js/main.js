@@ -52,7 +52,6 @@ function draw(){
     fill("black");
     textSize(22);
     textFont("Arial");
-    //rect(40,40,40,40);
     text( `${circulos.length} : ${engine.world.bodies.length}` , 40, 40);
     pop();
     Engine.update(engine);
