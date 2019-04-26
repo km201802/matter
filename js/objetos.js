@@ -1,42 +1,56 @@
-function Circle(x, y, r, s){
+function Circle(x, y, r, s){ //(x, y, radio, static)
+    this.frames = 0;
     var options = {
         friction: 0,
-        restitution: 1,
-        gravityScale: 0,
+        restitution: 0.7,
+        //gravityScale: 0,
         isStatic: s,
         
     };
-    var circle = Bodies.circle(x, y, r, options);
-    World.add(engine.world, circle);
-    circle.velocity.x = 3;
-    circle.velocity.y = 5;
+    this.circle = Bodies.circle(x, y, r, options);
+    World.add(world, this.circle);
+    this.circle.velocity.x = 3;
+    this.circle.velocity.y = 5;
     
-    this.position = circle.position;
+    this.position = this.circle.position;
+
     this.borrar = function(){
         return (this.position.y > height+100)
     }
+    this.eliminar = function(){
+        World.remove(world, this.circle);
+    }
+    this.Frames = function(){
+        this.frames++;
+    }
+
     this.draw = function(){
         push();
         translate(this.position.x, this.position.y);
         ellipse(0, 0, r*2);
         pop();
+        this.frames++;
     }
 }
-function Box(x, y, w, h, s){
+function Box(x, y, w, h, a, s){ // (x, y, width, height, angle, isStatic)
     var options = {
         isStatic: s,
         friction: 0,
-        restitution: 1
+        restitution: 1,
+        angle: a,
     }
-    var ground = Bodies.rectangle(x, y, w, h, options);
-    World.add(engine.world, ground);
+    this.box = Bodies.rectangle(x, y, w, h, options);
+    World.add(world, this.box);
     
-    this.position = ground.position;
+    this.position = this.box.position;
     
     this.draw = function(){
+        this.angle = this.box.angle;
         push();
-        translate(this.position.x, this.position.y);
         rectMode(CENTER);
+        //alert(this.angle);
+        translate(this.position.x, this.position.y);
+        rotate(this.angle);
         rect(0, 0, w, h);
         pop();
     }
