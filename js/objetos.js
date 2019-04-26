@@ -15,6 +15,9 @@ function Circle(x, y, r, s){
     this.borrar = function(){
         return (this.position.y > height+100)
     }
+    this.eliminar = function(){\
+        World.remove(engine.world, circle);
+    }
     this.draw = function(){
         push();
         translate(this.position.x, this.position.y);
