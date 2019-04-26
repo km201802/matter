@@ -31,10 +31,19 @@ function draw(){
     }
     for(var i=0; i<circulos.length; i++){
         circulos[i].draw();
-        if(circulos[i].borrar()){
+        
+        
+        
+        
+        try {
+            if(circulos[i].borrar()){
             circulos[i].eliminar();
             circulos.splice(i, 1);
             i--;
+        }
+        }
+        catch(err) {
+            alert(err);
         }
     }
     push();
