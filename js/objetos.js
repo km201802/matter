@@ -16,12 +16,7 @@ function Circle(x, y, r, s){
         return (this.position.y > height+100)
     }
     this.eliminar = function(){
-        try{
             World.remove(engine.world, circle);
-        }cath(err){
-            alert(err);
-        }
-        
     }
     this.draw = function(){
         push();
