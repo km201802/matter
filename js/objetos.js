@@ -33,6 +33,7 @@ function Circle(x, y, r, s){ //(x, y, radio, static)
     }
 }
 function Box(x, y, w, h, a, s){ // (x, y, width, height, angle, isStatic)
+    this.a = a;
     var options = {
         isStatic: s,
         friction: 0,

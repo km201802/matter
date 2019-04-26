@@ -10,6 +10,7 @@ var circulos = [];
 var width = innerWidth;
 var height = innerHeight;
 var world;
+var angle = 0;
 
 
 function setup(){
@@ -21,7 +22,7 @@ function setup(){
 
     world = engine.world;
     //circulos.push(new Circle(300,50,20,false));
-    suelos.push(new Box(width/2,height*0.95,width,30,true))
+    suelos.push(new Box(width/2,height*0.95,width,30,PI/10,true));
     //console.log(engine.world);
 }
 console.log(`${height} X ${width}`);
@@ -41,9 +42,6 @@ function draw(){
             i--;
         }
     }
-    if(circulos.length > 15){
-        circulos[14].circle.isStatic = true;
-    }
     push();
     textAlign(CENTER);
     rectMode(CENTER);
@@ -51,7 +49,7 @@ function draw(){
     textSize(22);
     textFont("Arial");
     //rect(40,40,40,40);
-    text( `${circulos.length} : ${world.bodies.length}` , 40, 40);
+    text( `${circulos.length} : ${suelos[0].box.angle} : ${world.bodies.length}` , 300, 40);
     pop();
     Engine.update(engine);
 }
