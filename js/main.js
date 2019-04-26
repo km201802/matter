@@ -52,7 +52,7 @@ function draw(){
     fill("black");
     textSize(22);
     textFont("Arial");
-    text( `${circulos.length} : ${engine.world.bodies.length}` , 40, 40);
+    text( `${circulos.length} : ${engine.world.bodies.length}` , 60, 40);
     pop();
     Engine.update(engine);
 }
