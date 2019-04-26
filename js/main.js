@@ -32,7 +32,9 @@ function draw(){
     for(var i=0; i<circulos.length; i++){
         circulos[i].draw();
         if(circulos[i].borrar()){
+            circulos[i].eliminar();
             circulos.splice(i, 1);
+            i--;
         }
     }
     push();
@@ -42,8 +44,7 @@ function draw(){
     textSize(22);
     textFont("Arial");
     //rect(40,40,40,40);
-    text( circulos.length , 40, 40);
+    text( `${circulos.length} : ${}` , 40, 40);
     pop();
-    console.log(circulos.length);
     Engine.update(engine);
 }
