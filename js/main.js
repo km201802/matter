@@ -7,6 +7,7 @@ var Engine = Matter.Engine,
 var engine;
 var suelos = [];
 var circulos = [];
+var cajas = [];
 var width = innerWidth;
 var height = innerHeight;
 var world;
@@ -29,10 +30,14 @@ console.log(`${height} X ${width}`);
 function draw(){
     background(100);
     if(mouseIsPressed){
-        circulos.push(new Circle(mouseX,mouseY,20,false));
+        //circulos.push(new Circle(mouseX,mouseY,20,false));
+        cajas.push(new Box(width/2,height*0.95,width,30,0,false));
     }
     for(var i=0; i<suelos.length; i++){
         suelos[i].draw();
+    }
+    for(var i=0; i<cajas.length; i++){
+        cajas[i].draw();
     }
     for(var i=0; i<circulos.length; i++){
         circulos[i].draw();
