@@ -49,7 +49,7 @@ function draw(){
     textSize(22);
     textFont("Arial");
     //rect(40,40,40,40);
-    text( `${circulos.length} : ${suelos[0].box.angle} : ${world.bodies.length}` , 300, 40);
+    text( `${circulos.length} : ${world.bodies.length}` , 300, 40);
     pop();
     Engine.update(engine);
 }
