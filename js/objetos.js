@@ -45,6 +45,13 @@ function Box(x, y, w, h, a, s){ // (x, y, width, height, angle, isStatic)
     
     this.position = this.box.position;
     
+    this.borrar = function(){
+        return (this.position.y > height+100)
+    }
+    this.eliminar = function(){
+        World.remove(world, this.box);
+    }
+    
     this.draw = function(){
         this.angle = this.box.angle;
         push();
@@ -56,3 +63,7 @@ function Box(x, y, w, h, a, s){ // (x, y, width, height, angle, isStatic)
         pop();
     }
 }
+
+//var Rope = function ();
+
+
