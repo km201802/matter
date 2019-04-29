@@ -64,6 +64,38 @@ function Box(x, y, w, h, a, s){ // (x, y, width, height, angle, isStatic)
     }
 }
 
-//var Rope = function ();
+var Rope = function (x, y, radius, length, number){
+    this.x = x;
+    this.y = y;
+    this.r = radius;
+    this.l = length;
+    this.num = number;
+    this.con = true;
+    var constraint = [];
+    var circle = [];
+    for(var i=0; i<this.num; i++){
+        circle.push(new Circle(this.x + (i*50), this.y, this.r, this.con));
+        this.con = false;
+    }
+    
+    
+
+    
+    
+    for(var i=0; i<constraint.length; i++){
+        if(i<constraint.length-1){
+        constraint.push(Constraint.create({bodyA: circulos[i].circle, bodyB: circulos[i+1].circle, length: this.l,}));
+        
+        World.add(world, constraint[i]);
+        }
+    }
+    
+    
+    this.draw = function(){
+        for(var i=0; i<circulos.length; i++){
+            circle[i].draw();
+        }
+    }
+}
 
 
