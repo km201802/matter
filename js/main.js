@@ -41,7 +41,7 @@ function mouseWheel(event) {
   pos += event.delta;
 }
 try {
-  rope.push(300, 50, 20, 50, 5);
+  ropes.push(300, 50, 20, 50, 5);
 }
 catch(error) {
   alert(error);
