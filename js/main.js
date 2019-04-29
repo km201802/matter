@@ -31,7 +31,7 @@ function draw(){
     background(100);
     if(mouseIsPressed){
         //circulos.push(new Circle(mouseX,mouseY,20,false));
-        cajas.push(new Box(width/2,height*0.95,width,30,0,false));
+        cajas.push(new Box(mouseX, mouseY ,random(30, 60), radom(30, 60),0,false));
     }
     for(var i=0; i<suelos.length; i++){
         suelos[i].draw();
