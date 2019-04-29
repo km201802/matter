@@ -40,7 +40,12 @@ var pos = 0
 function mouseWheel(event) {
   pos += event.delta;
 }
-
+try {
+  rope.push(300, 50, 20, 50, 5);
+}
+catch(error) {
+  alert(error);
+}
 
 console.log(`${height} X ${width}`);
 function draw(){
