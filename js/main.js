@@ -1,3 +1,4 @@
+Mi unidad
 // module aliases
 var Engine = Matter.Engine,
     Render = Matter.Render,
@@ -7,7 +8,7 @@ var Engine = Matter.Engine,
 
 var engine;
 var suelos = [];
-var circulos = [];
+//var circulos = [];
 var cajas = [];
 var ropes = [];
 var width = innerWidth;
@@ -24,28 +25,18 @@ function setup(){
     engine = Engine.create();
 
     world = engine.world;
-    //circulos.push(new Circle(300,50,20,false));
     suelos.push(new Box(width/2,height*0.95,width,30,0,true));
-    
-    circulos.push(new Circle(300,50,20,true));
-    circulos.push(new Circle(400,50,20,false));
-    var constraint = Constraint.create({
-        bodyA: circulos[0].circle,
-        bodyB: circulos[1].circle,
-        length:500,
-    });
-    World.add(world, constraint);
+    new Rope(1200,100,20,40,30);
+    for(var i=0; i<Circulos.length; i++){
+        Circulos[i].
+    }
+    new Rope(200,100,20,40,1);
 }
 var pos = 0
 function mouseWheel(event) {
   pos += event.delta;
 }
-try {
-  //ropes.push(300, 50, 20, 50, 5);
-}
-catch(error) {
-  alert(error);
-}
+
 
 console.log(`${height} X ${width}`);
 function draw(){
@@ -57,9 +48,6 @@ function draw(){
     for(var i=0; i<suelos.length; i++){
         suelos[i].draw();
     }
-//     for(var i=0; i<ropes.length; i++){
-//         ropes[i].draw();
-//     }
     for(var i=0; i<cajas.length; i++){
         cajas[i].draw();
         if(cajas[i].borrar()){
@@ -74,6 +62,14 @@ function draw(){
         if(circulos[i].borrar()){
             circulos[i].eliminar();
             circulos.splice(i, 1);
+            i--;
+        }
+    }
+    for(var i=0; i<Circulos.length; i++){
+        Circulos[i].draw();
+        if(Circulos[i].borrar()){
+            Circulos[i].eliminar();
+            Circulos.splice(i, 1);
             i--;
         }
     }
