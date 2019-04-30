@@ -63,7 +63,7 @@ function Box(x, y, w, h, a, s){ // (x, y, width, height, angle, isStatic)
         pop();
     }
 }
-
+/*
 var Rope = function (x, y, radius, length, number){
     this.x = x;
     this.y = y;
@@ -98,4 +98,4 @@ var Rope = function (x, y, radius, length, number){
     }
 }
 
-
+*/
