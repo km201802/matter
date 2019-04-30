@@ -41,7 +41,7 @@ function mouseWheel(event) {
   pos += event.delta;
 }
 try {
-  ropes.push(300, 50, 20, 50, 5);
+  //ropes.push(300, 50, 20, 50, 5);
 }
 catch(error) {
   alert(error);
@@ -57,9 +57,9 @@ function draw(){
     for(var i=0; i<suelos.length; i++){
         suelos[i].draw();
     }
-    for(var i=0; i<ropes.length; i++){
-        ropes[i].draw();
-    }
+//     for(var i=0; i<ropes.length; i++){
+//         ropes[i].draw();
+//     }
     for(var i=0; i<cajas.length; i++){
         cajas[i].draw();
         if(cajas[i].borrar()){
