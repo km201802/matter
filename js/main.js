@@ -26,9 +26,9 @@ function setup(){
     world = engine.world;
     suelos.push(new Box(width/2,height*0.95,width,30,0,true));
     new Rope(1200,100,20,40,30);
-    for(var i=0; i<Circulos.length; i++){
+    /*for(var i=0; i<Circulos.length; i++){
         Circulos[i].
-    }
+    }*/
     new Rope(200,100,20,40,1);
 }
 var pos = 0
