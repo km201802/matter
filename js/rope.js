@@ -1,4 +1,3 @@
-
 var circulos = [];
 var Circulos = [];
 var Rope = function(x, y, r, l, n){
