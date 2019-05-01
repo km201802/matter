@@ -25,11 +25,14 @@ function setup(){
 
     world = engine.world;
     suelos.push(new Box(width/2,height*0.95,width,30,0,true));
-    new Rope(1200,100,20,40,30);
     /*for(var i=0; i<Circulos.length; i++){
         Circulos[i].
     }*/
-    new Rope(200,100,20,40,1);
+    //new Rope(200,100,20,40,13);
+    //new Rope(400,100,20,40,13);
+    new Bridge(0, 100, width, 100, 20, 40, 50);
+    //new Bridge(600, 100, 1300, 100, 20, 40, 25);
+    
 }
 var pos = 0
 function mouseWheel(event) {
@@ -41,8 +44,8 @@ console.log(`${height} X ${width}`);
 function draw(){
     background(100);
     if(mouseIsPressed){
-        //circulos.push(new Circle(mouseX,mouseY,20,false));
-            cajas.push(new Box(mouseX, mouseY ,random(30, 60), random(30, 60),0,false));
+        circulos.push(new Circle(mouseX,mouseY,random(20,40),false));
+        cajas.push(new Box(mouseX, mouseY ,random(30, 60), random(30, 60),0,false));
     }
     for(var i=0; i<suelos.length; i++){
         suelos[i].draw();
