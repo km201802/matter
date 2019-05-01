@@ -1,8 +1,8 @@
 function Circle(x, y, r, s){ //(x, y, radio, static)
     this.frames = 0;
     var options = {
-        friction: 0,
-        restitution: 0.7,
+        //friction: 0,
+        //restitution: 0.7,
         //gravityScale: 0,
         isStatic: s,
         
@@ -36,8 +36,8 @@ function Box(x, y, w, h, a, s){ // (x, y, width, height, angle, isStatic)
     this.a = a;
     var options = {
         isStatic: s,
-        friction: 0,
-        restitution: 1,
+        //friction: 0,
+        //restitution: 1,
         angle: a,
     }
     this.box = Bodies.rectangle(x, y, w, h, options);
