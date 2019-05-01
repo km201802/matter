@@ -1,5 +1,4 @@
 // module aliases
-try{
 var Engine = Matter.Engine,
     Render = Matter.Render,
     World = Matter.World,
@@ -83,8 +82,4 @@ function draw(){
     text( `${circulos.length} : ${world.bodies.length}` , 300, 40);
     pop();
     Engine.update(engine);
-}
-}
-catch(error){
-    alert(error);
 }
