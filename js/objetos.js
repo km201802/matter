@@ -1,4 +1,4 @@
-var fricc = 0.2
+var fricc = 0.05;
 function Circle(x, y, r, s){ //(x, y, radio, static)
     this.frames = 0;
     var options = {
